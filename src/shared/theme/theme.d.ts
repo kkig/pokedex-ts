@@ -10,7 +10,7 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secondary: string;
-      bodyText: string;
+      primaryText: string;
     };
 
     fontFamily: {

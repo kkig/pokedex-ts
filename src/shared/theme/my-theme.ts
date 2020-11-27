@@ -1,15 +1,5 @@
 import { DefaultTheme } from 'styled-components';
 
-// const theme: DefaultTheme = {
-//   colors: {
-//     primary: 'lightgray',
-//     secondary: 'blue',
-//     primaryText: 'gainsboro',
-//   },
-// };
-
-// export default { theme };
-
 const myTheme: DefaultTheme = {
   breakPoints: {
     mobile: '40em',
@@ -20,7 +10,7 @@ const myTheme: DefaultTheme = {
   colors: {
     primary: 'lightgray',
     secondary: 'blue',
-    bodyText: '#212121',
+    primaryText: '#212121',
   },
 
   fontFamily: {

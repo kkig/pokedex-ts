@@ -4,22 +4,19 @@ import React from 'react';
 import styled from 'styled-components';
 import myTheme from '../theme/my-theme';
 
-// const GlobalStyle = createGlobalStyle`
-//   h1 {
-//     margin: 0;
-//     background-color: 'gainsboro';
-//   }
-// `;
-
+// Styles
 export const Container = styled.main`
   width: 100%;
   height: 100%;
 `;
 
-export const Heading = styled.h1`
-  color: ${myTheme.colors.bodyText};
+export const Heading = styled.span`
+  color: ${myTheme.colors.primaryText};
   font-family: ${myTheme.fontFamily.heading};
+  font-size: 1.75rem;
+  font-weight: 600;
   letter-spacing: 0.25rem;
+  margin: 0;
 `;
 
 const App: React.FC = () => {
