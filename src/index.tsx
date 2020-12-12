@@ -1,49 +1,79 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { ThemeProvider } from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
-import myTheme from './shared/theme/my-theme';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-import App from './shared/App/App';
+import App from './App';
 
-// Style
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box
-  }
+const myTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#87cefa',
+    },
+    text: {
+      primary: '#333333',
+    },
+  },
+  typography: {
+    h6: {
+      fontFamily: [
+        'Nunito',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'sans-serif',
+      ].join(','),
+      fontWeight: 600,
+      letterSpacing: '.15em',
+    },
+    body2: {
+      fontFamily: ['Open Sans', 'sans-serif'].join(','),
+    },
+  },
 
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
+  overrides: {
+    MuiAppBar: {
+      colorPrimary: { color: '#fff' },
+    },
+    MuiButton: {
+      containedPrimary: { color: '#fff' },
+    },
+    MuiIcon: {
+      colorPrimary: { color: '#fff' },
+    },
 
-  body {
-    background-color: aliceblue;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    line-height: 1.2;
-    width: 100%;
-    min-height: 100vh; 
-    display: flex;   
-    font-size: ${myTheme.fontSize.bodyText};
-    font-family: ${myTheme.fontFamily.primary};
-
-    vertical-align: baseline;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-  }
-`;
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          boxSizing: 'border-box',
+        },
+        body: {
+          margin: 0,
+          height: '100vh',
+          fontSize: 14,
+          letterSpacing: '.025em',
+          lineHeight: 1.5,
+          '-webkit-font-smoothing': 'antialiased',
+          '-moz-osx-font-smoothing': 'grayscale',
+        },
+        img: {
+          verticalAlign: 'middle',
+        },
+      },
+    },
+  },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStyle />
-    <ThemeProvider theme={myTheme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
-  // eslint-disable-next-line no-undef
+  <ThemeProvider theme={myTheme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 

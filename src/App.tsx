@@ -2,7 +2,7 @@ import React from 'react';
 // import './App.css';
 
 import styled from 'styled-components';
-import myTheme from '../theme/my-theme';
+import myTheme from './shared/theme/my-theme';
 
 // Styles
 export const Container = styled.main`
