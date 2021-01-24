@@ -1,4 +1,3 @@
-import React from 'react';
 // import './App.css';
 
 import Container from '@material-ui/core/Container';
@@ -36,6 +35,8 @@ const AppTitle = styled(Typography)`
 //   margin: 0;
 // `;
 
+// https://pokeapi.co/api/v2/pokemon?offset=10&limit=10
+
 const App: React.FC = () => {
   return (
     <AppContainer>
@@ -47,7 +48,6 @@ const App: React.FC = () => {
 
       <main>
         <Cards />
-        Woo
       </main>
     </AppContainer>
   );

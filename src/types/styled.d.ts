@@ -1,5 +1,5 @@
 import 'styled-components';
-import { Theme } from '@material-ui/core';
+import { Theme } from '@material-ui/core/styles/createMuiTheme';
 
 declare module 'styled-compoents' {
   export interface DefaultTheme extends Theme {
